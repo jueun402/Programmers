@@ -1,10 +1,8 @@
 # 1. 두 정수 사이의 합
-
 def solution(a, b):
     return sum(range(min(a,b), max(a,b)+1))
 
 # 2. 수박수박수박수?
-
 def solution(n):
     answer = '수박'*10000
     return answer[:n]
@@ -16,7 +14,6 @@ def water_melon(n):
     return s[:n]
 
 # 3. 서울에서 김서방 찾기
-
 def solution(seoul):
     a = [i for i,j in enumerate(seoul) if j == "Kim"]
     answer = "김서방은 "+ str(a[0])+ "에 있다"
@@ -28,13 +25,11 @@ def findKim(seoul):
 
 # 4. 약수의 합
 # 5. 문자열 내 p와 y의 개수
-
 def solution(s):
     return s.lower().count('p') == s.lower().count('y')
 
 
 # 6. 같은 숫자는 싫어
-
 def solution(arr):
     answer = [arr[0]]
 
@@ -44,7 +39,6 @@ def solution(arr):
     return answer
 
 # 7. 가운데 글자 가져오기
-
 def solution(s):
     index = len(s)//2
 
@@ -60,7 +54,6 @@ def string_middle(str):
     return str[(len(str)-1)//2:len(str)//2+1]
 
 # 9. x만큼 간격이 있는 n개의 숫자
-
 def solution(x, n):
     answer = []
     result = x
@@ -121,7 +114,7 @@ def solution(n):
 
 # 15. 최대공약수와 최소공배수 
 
-### 최대공약수, 최소공배수 코드는 외우기 
+### 최대공약수, 최소공배수 코드 외우기 
 ## 내 풀이 
 
 # 최대공약수 

@@ -1,0 +1,62 @@
+
+탐색의 종류
+
+1. 완전탐색
+2. 이분탐색
+3. 깊이우선탐색
+4. 너비우선탐색
+
+
+완전탐색  (Brute Force)
+- 모든 가능한 경우의 수 탐색
+
+구현 방법 
+
+1. 반복문 활용 
+
+def solution(trump):
+    for i in range(len(trump)):
+        if trump[i]==8:
+            return i
+    return -1
+
+
+2. 재귀함수 
+    - 동적 계획법
+    - 백트래킹
+    - 탐욕법
+
+def solution(trump, loc):
+    if trump[loc] == 8:
+        return loc
+    else:
+        return solution(trump,loc+1)
+
+##############################################################################################################################
+이분탐색 (Binary Search)
+- 오름차순으로 정렬된 리스트에서 특정 값의 위치를 찾는 알고리즘 중간값을 선택하여, 찾고자 하는 값과 대소를 비교하는 방법임 
+
+
+def solution(trump):
+    left = 0
+    right = len(trump)-1
+
+    while(left <= right):
+        mid = (left - right)//2
+        if trump[mid]==8:
+            return mid
+        elif trump[mid] <8:
+            left = mid + 1
+        elif trump[mid] >8:
+            right = mid - 1
+
+    return mid
+
+
+
+
+
+
+
+
+
